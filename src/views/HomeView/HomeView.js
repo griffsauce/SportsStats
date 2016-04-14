@@ -39,10 +39,12 @@ export class HomeView extends React.Component<void, Props, void> {
           </div>
         </div>
         <h1>Welcome to Sports Stats</h1>
-        <h2> Stats keeper</h2>
+        <h2> Player Database</h2>
         <form>
-          <input type="text" placeholder="Enter player name" required/>
-          <label><input type="checkbox" name="position"/> Forward</label>
+          <input type="text" placeholder="Enter player name" required/><br/>
+          <label><input type="radio" name="position"/> Forward</label><br/>
+          <label><input type="radio" name="position"/> Defensemen</label><br/>
+          <label><input type="radio" name="position"/> Goalie</label><br/>
           <button type="Submit">Submit</button>
         </form>
       </div>
