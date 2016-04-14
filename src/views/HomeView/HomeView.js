@@ -38,19 +38,13 @@ export class HomeView extends React.Component<void, Props, void> {
               alt='This is a duck, because Redux.' />
           </div>
         </div>
-        <h1>Welcome to the React Redux Starter Kit</h1>
-        <h2>
-          Sample Counter:
-          {' '}
-          <span className={classes['counter--green']}>{this.props.counter}</span>
-        </h2>
-        <button className='btn btn-default' onClick={this.props.increment}>
-          Increment
-        </button>
-        {' '}
-        <button className='btn btn-default' onClick={this.props.doubleAsync}>
-          Double (Async)
-        </button>
+        <h1>Welcome to Sports Stats</h1>
+        <h2> Stats keeper</h2>
+        <form>
+          <input type="text" placeholder="Enter player name" required/>
+          <label><input type="checkbox" name="position"/> Forward</label>
+          <button type="Submit">Submit</button>
+        </form>
       </div>
     )
   }
