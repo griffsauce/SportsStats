@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 import { increment, doubleAsync } from '../../redux/modules/counter'
 import DuckImage from './Duck.jpg'
 import classes from './HomeView.scss'
+import Bench from '../../components/Bench/Bench'
+import Events from '../../components/Events/Events'
 
 // We can use Flow (http://flowtype.org/) to type our component's props
 // and state. For convenience we've included both regular propTypes and
@@ -42,18 +44,29 @@ export class HomeView extends React.Component<void, Props, void> {
         <h2> Player Database</h2>
         <form>
           <input type="text" placeholder="Enter player name" required/><br/>
+          <input type="text" placeholder="Player Number" required/><br/>
           <label><input type="radio" name="position"/> Forward</label><br/>
           <label><input type="radio" name="position"/> Defensemen</label><br/>
           <label><input type="radio" name="position"/> Goalie</label><br/>
           <button type="Submit">Submit</button>
         </form>
+        <Bench
+        team={this.props.game.home}
+        />
+        <Bench
+        team={this.props.game.away}
+        />
+        <Events
+        game={this.props.game}
+        />
       </div>
     )
   }
 }
 
 const mapStateToProps = (state) => ({
-  counter: state.counter
+  counter: state.counter,
+  game: state.game
 })
 export default connect((mapStateToProps), {
   increment: () => increment(1),
