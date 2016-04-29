@@ -2,10 +2,11 @@
 import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { increment, doubleAsync } from '../../redux/modules/counter'
-import DuckImage from './Duck.jpg'
+import Rink from './icerink.jpg'
 import classes from './HomeView.scss'
 import Bench from '../../components/Bench/Bench'
 import Events from '../../components/Events/Events'
+
 
 // We can use Flow (http://flowtype.org/) to type our component's props
 // and state. For convenience we've included both regular propTypes and
@@ -30,13 +31,14 @@ export class HomeView extends React.Component<void, Props, void> {
     increment: PropTypes.func.isRequired
   };
 
+
   render () {
     return (
       <div className='container text-center'>
         <div className='row'>
           <div className='col-xs-2 col-xs-offset-5'>
-            <img className={classes.duck}
-              src={DuckImage}
+            <img className={classes.Rink}
+              src={Rink}
               alt='This is a duck, because Redux.' />
           </div>
         </div>
