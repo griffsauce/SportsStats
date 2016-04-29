@@ -7,9 +7,15 @@ export class Bench extends React.Component {
   props: Props;
 
   render () {
+    let team= this.props.team
     return (
+      <div>
+      <h3>
+      {team.name}: {team.mascot}<br/>
+      {team.site}
+      </h3>
       <ul>
-      {this.props.team.map((player) => {
+      {team.players.map((player) => {
         return(
           <BenchPlayer
             player={player}
@@ -17,6 +23,7 @@ export class Bench extends React.Component {
         )
       })}
       </ul>
+      </div>
     )
   }
 }
