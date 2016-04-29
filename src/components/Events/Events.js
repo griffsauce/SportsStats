@@ -1,5 +1,5 @@
 import React from 'react'
-import eventItems from '../../components/eventItems/eventItems'
+import EventItems from '../../components/EventItems/EventItems'
 type Props = {
 
 };
@@ -9,9 +9,17 @@ export class Events extends React.Component {
   render () {
     console.log(this.props)
     return (
-      <div>
-      Events
-      </div>
+      <ul>
+      {this.props.game.events.map((item) => {
+        return(
+          <EventItems
+          item={item}
+          />
+        )
+      })}
+      </ul>
+
+
     )
   }
 }
