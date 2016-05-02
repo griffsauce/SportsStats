@@ -10,7 +10,9 @@ export class EventItems extends React.Component {
     let item=this.props.item
     return (
       <li>
-      {item.type} <br/>Score: Home {item.score.home} - {item.score.away} Away
+      {item.type} <br/> {item.team}<br/>
+      {item.position}<br/>
+      Score: Home {item.score.home} - {item.score.away} Away
       </li>
     )
   }
