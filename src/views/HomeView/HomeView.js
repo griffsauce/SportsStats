@@ -54,9 +54,11 @@ export class HomeView extends React.Component<void, Props, void> {
         </form>
         <Bench
         team={this.props.game.home}
+        which="home"
         />
         <Bench
         team={this.props.game.away}
+        which="away"
         />
         <Events
         game={this.props.game}
