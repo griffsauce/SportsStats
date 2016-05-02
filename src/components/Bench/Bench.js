@@ -13,7 +13,7 @@ export class Bench extends React.Component {
 
       <h3>
       {team.name}: {team.mascot}<br/>
-      {team.site}
+      <a href={team.site}>Team Website</a>
       </h3>
       <ul>
       {team.players.map((player) => {

@@ -20,7 +20,16 @@ const initialstate = {
       players: [
         2, 0
       ]
-    }
+    },
+    {
+      type: "shot on goal",
+      score: {
+        home: 2,
+        away: 1
+      },
+      team: "Home",
+      position: "Right in front of the net",
+      }
   ],
   home: {
     name: "Bridgton Academy",
