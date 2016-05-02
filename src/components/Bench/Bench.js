@@ -9,7 +9,8 @@ export class Bench extends React.Component {
   render () {
     let team= this.props.team
     return (
-      <div>
+      <div className={this.props.which}>
+
       <h3>
       {team.name}: {team.mascot}<br/>
       <a href={team.site}>Team Website</a>
